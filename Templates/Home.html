@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+    <h1>Hello Welcome to the Home Page</h1>
+    <form action="/predict" method="POST">
+    Clump: <input type="number" name="Clump"><br>
+    UnifSize: <input type="number" name="UnifSize"><br>
+    UnifShape: <input type="number" name="UnifShape"><br>
+    MargAdh: <input type="number" name="MargAdh"><br>
+    SingEpiSize: <input type="number" name="SingEpiSize"><br>
+    BareNuc: <input type="number" name="BareNuc"><br>
+    BlandChrom: <input type="number" name="BlandChrom"><br>
+    NormNucl: <input type="number" name="NormNucl"><br>
+    Mit: <input type="number" name="Mit"><br>
+
+    <button type="submit">Predict</button>
+</form>
+
+{% if result %}
+    <h2>Prediction Result: {{ result }}</h2>
+{% endif %}
+</body>
+</html>
